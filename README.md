@@ -54,6 +54,17 @@ Also add the TypeScript EsLint Config
 pnpm i -D eslint-config-airbnb-typescript @typescript-eslint/eslint-plugin@^5.13.0 @typescript-eslint/parser@^5.0.0
 ```
 
+Add a `.eslintignore` to define files that shouldn't be formatted.
+
+```ignore
+.vscode
+.idea
+.husky
+build
+node_modules
+pnpm-lock.yaml
+```
+
 ### Setup Prettier
 
 Install Prettier dependencies
@@ -67,6 +78,7 @@ Add a `.prettierignore` to define files that shouldn't be formatted.
 ```prettier
 .vscode
 .idea
+.husky
 build
 node_modules
 pnpm-lock.yaml
@@ -80,6 +92,28 @@ Add a Prettier Script on the `package.json`
     "prettier": "prettier --write ."
   }
 }
+```
+
+### Git Hooks
+
+Install Husky to run scripts at different stages of the git process
+
+```bash
+pnpm add -D husky
+pnpm dlx husky install
+```
+
+Set up a Pre-Commit script to lint the codebase before committing to Git
+
+```bash
+pnpm dlx husky add .husky/pre-commit "pnpm lint"
+```
+
+Set up a Pre-Push script to format & build the code before pushing to Git to ensure everything is working well before
+the code is pushed
+
+```bash
+pnpm dlx husky add .husky/pre-push "pnpm prettier && pnpm build"
 ```
 
 ### Setup Testing
