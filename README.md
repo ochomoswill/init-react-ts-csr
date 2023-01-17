@@ -116,6 +116,22 @@ the code is pushed
 pnpm dlx husky add .husky/pre-push "pnpm prettier && pnpm build"
 ```
 
+### Setup Commit Linting
+
+Standardize commit messages by using a commit linter
+
+Install the commit lint packages
+
+```bash
+pnpm add -D @commitlint/config-conventional @commitlint/cli
+```
+
+Set up a Commit Msg Hook to lint the commit message
+
+```bash
+pnpm dlx husky add .husky/commit-msg 'pnpm dlx --no -- commitlint --edit "$1"'
+```
+
 ### Setup Testing
 
 Install Vitest
