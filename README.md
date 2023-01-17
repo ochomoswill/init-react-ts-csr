@@ -72,6 +72,16 @@ node_modules
 pnpm-lock.yaml
 ```
 
+Add a Prettier Script on the `package.json`
+
+```json
+{
+  "scripts": {
+    "prettier": "prettier --write ."
+  }
+}
+```
+
 ### Setup Testing
 
 Install Vitest
