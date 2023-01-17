@@ -15,7 +15,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean-install": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm i"
   },
   "dependencies": {
     "react": "^18.2.0",

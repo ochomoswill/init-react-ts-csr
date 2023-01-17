@@ -222,4 +222,4 @@ pnpm i -D @testing-library/react @testing-library/jest-dom
 ## References
 
 1. [Setting up vite, React, TypeScript, eslint, vitest, testing-library and react-router](https://www.youtube.com/watch?v=cchqeWY0Nak&list=WL&index=6&t=216s)
-2. [How to Build Scalable Architecture for your Next.js Project](https://www.youtube.com/watch?v=Iu5aZDqZt8E)
+2. [How to Build Scalable Architecture for your Next.js Project](https://dev.to/alexeagleson/how-to-build-scalable-architecture-for-your-nextjs-project-2pb7)
