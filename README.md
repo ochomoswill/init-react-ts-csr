@@ -181,7 +181,28 @@ module.exports = {
     ]
   }
 };
+```
 
+### Setup VS Code Editor Settings
+
+Create `settings.json` file under `.vscode` folder
+
+```bash
+mkdir .vscode
+nano .vscode/settings.json
+```
+
+Add the below settings
+
+```json
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true
+  }
+}
 ```
 
 ### Setup Testing
